@@ -1,4 +1,6 @@
-learning
+learning by shawn.zeng --- for demo code
 ========
 
-learning
+### 1.design Pattern
+### 2.algorithm
+
