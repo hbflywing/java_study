@@ -16,8 +16,11 @@ public class ExceptionThread implements Runnable{
 
 class MyUncaughtExceptionHandler implements Thread.UncaughtExceptionHandler{
 
+     
+
     @Override
     public void uncaughtException(Thread t, Throwable e) {
         System.out.println("handler call");
+
     }
 }
