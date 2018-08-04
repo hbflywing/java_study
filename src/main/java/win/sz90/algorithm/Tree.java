@@ -49,6 +49,7 @@ public class Tree {
         }else {
             int i = getHeight(node.lChild);
             int j = getHeight(node.rChild);
+            //哪边多取哪边
             return i>j?i+1:j+1;
         }
     }
