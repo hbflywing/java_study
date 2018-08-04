@@ -2,6 +2,8 @@ package win.sz90.algorithm;
 
 public class Tree {
 
+    static int count = 1;
+
     public static void preSearch(Node node){
         System.out.print(node.data);
         if(node.lChild != null){
@@ -32,6 +34,24 @@ public class Tree {
         System.out.print(node.data);
     }
 
+    public static int getNodeSize(Node node){
+
+        if(node == null){
+            return 0;
+        }else {
+            return 1+ getNodeSize(node.rChild)+getNodeSize(node.lChild);
+        }
+    }
+
+    public static int getHeight(Node node){
+        if(node == null){
+            return 0;
+        }else {
+            int i = getHeight(node.lChild);
+            int j = getHeight(node.rChild);
+            return i>j?i+1:j+1;
+        }
+    }
 
     public static void main(String[] args) {
         Node node1 = new Node();
@@ -56,6 +76,9 @@ public class Tree {
         midSearch(node1);
         System.out.println("");
         endSearch(node1);
+        System.out.println("");
+        System.out.println(getNodeSize(node1));
+        System.out.println(getHeight(node1));
     }
 
     static class Node {
